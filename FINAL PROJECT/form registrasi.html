@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <title> FORM REGISTRASI</title>
+        <link rel="stylesheet" href="./FORM REGISTRASI.css">
+        <script src="validasiForm.js"></script>
+    </head>
+    <body>
+        <form>
+            <label for ="email"> Email :</label>
+            <input type="text" id="email" name="email">
+
+            <label for="nama"> Nama :</label>
+            <input type="text" id="nama" name="nama"pattern="[a-z]{3-26}" required>
+
+            <label for="nomor"> Nomor Telepon :</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{14}" required>
+
+            <label for="dropdown"> Event yang akan diikuti :</label>
+
+            <select name="dropdown" id="dropdown">
+                <option value="acara pembukaan"> Acara Pembukaan</option>
+                <option value="pameran hari pertama"> Pameran Hari Pertama</option>
+                <option value="pameran hari kedua"> Pameran Hari Kedua</option>
+                <option value="acara penutupan"> Acara Penutupan</option>
+            </select>
+            
+            <input type="submit" value="Registrasi">
+        </form>
+    </body>
+</html>

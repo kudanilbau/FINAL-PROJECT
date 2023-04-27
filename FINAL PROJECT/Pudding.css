@@ -1,0 +1,126 @@
+nav{
+    background-color : #333;
+    color : #fff;
+    font-size : 18px;
+    font-weight : bold;
+    padding : 10px;
+}
+
+ul{
+    list-style: none;
+    margin : 0;
+    padding : 0;
+    text-align : center;
+}
+
+li{
+    display : inline-block;
+    margin-right : 20px;
+}
+
+a{
+    color : black;
+    text-decoration : none;
+}
+
+@media only sreen and (max-width : 768px){
+    nav{
+        display : flex;
+        flex-direction : column;
+        align-items: center;
+    }
+
+    li{
+        display : block;
+        margin : 10px 0;
+    }
+} 
+
+
+
+
+.timeline{
+    position : relative;
+    max-width : 1200px;
+    margin : 0 auto;
+}
+
+.timeline:before{
+    content: '';
+    position : absolute;
+    top: 0;
+    bottom : 0;
+    left : 50%;
+    width : 2px;
+    background-color : #007bff;
+    transform : translateX(-50%);
+}
+
+.timeline-item{
+    position : relative;
+    margin : 50px 0;
+}
+
+.timeline-item-content{
+    position : relative;
+    width : 50px;
+    padding : 20px;
+    background-color : #f8f8f8;
+    border-radius : 5px;
+}
+
+.timeline-item-badge{
+    position : absolute;
+    top : 20px;
+    left : -25px;
+    width : 50px;
+    height : 50px;
+    border-radius : 50%;
+    background-color : #007bff ;
+    color : #fff;
+    font-size : 24px;
+    text-align : center;
+    line-height : 50px;
+}
+
+.timeline-item:before{
+    content : '';
+    position : absolute;
+    top : 25px;
+    left : -10px;
+    width : 20px;
+    height : 20px;
+    border-radius : 50%;
+    background-color : #fff;
+    border : 2px solid #007bff;
+}
+
+.timeline-item:after{
+    content : '';
+    position : absolute;
+    top : 100%;
+    left : -50%;
+    width : 0;
+    height : 0;
+    border-style : solid;
+    border-width : 15px 15px 0 0;
+    border-color : #007bff transparent transparent transparent;
+}
+
+.timeline-item:last-child:before{
+    height : 30px;
+}
+
+.timeline-item:nth-child(even) .timeline-item-content{
+    float  : right;
+}
+
+.timeline-item:nth-child(even) .timeline-item-badge{
+    left : auto;
+    right : -25px;
+}
+
+.timeline-item:nth-child(even):before{
+    left : auto;
+}
+
